@@ -165,15 +165,15 @@ class UIManager:
             self.screen.blit(instr, (stats_x, stats_y + 4 * line_h + 72))
         else:
             self.buttons = []
-            play_again = Button(
+            retry_btn = Button(
                 pygame.Rect(self.width // 2 - 90, stats_y + 4 * line_h + 15, 180, 40),
-                'Play Again', self.theme.accent, self.theme.snake_head, 20, 6,
+                'Retry', self.theme.accent, self.theme.snake_head, 20, 6,
             )
-            to_menu = Button(
+            home_btn = Button(
                 pygame.Rect(self.width // 2 - 90, stats_y + 4 * line_h + 65, 180, 40),
-                'Main Menu', (40, 40, 55), self.theme.text_secondary, 20, 6,
+                'Home', (40, 40, 55), self.theme.text_secondary, 20, 6,
             )
-            self.buttons = [play_again, to_menu]
+            self.buttons = [retry_btn, home_btn]
             for b in self.buttons:
                 b.draw(self.screen, self.theme, time_s)
 

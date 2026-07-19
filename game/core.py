@@ -439,7 +439,7 @@ class Game:
             self.audio.set_volume(vol)
 
     def _handle_button(self, text: str):
-        if text in ('Play', 'Play Again'):
+        if text in ('Play', 'Retry'):
             self.state = GameState.PLAYING
             self._reset_game()
             self.audio.play('menu_select')
@@ -454,7 +454,7 @@ class Game:
         elif text == 'Resume':
             self.state = GameState.PLAYING
             self.audio.play('menu_select')
-        elif text in ('Quit to Menu', 'Main Menu'):
+        elif text in ('Quit to Menu', 'Home'):
             self.state = GameState.MENU
             self._reset_game()
             self.audio.play('menu_select')

@@ -288,6 +288,7 @@ class Game:
 
     def _handle_death(self):
         self.snake.alive = False
+        self.state = GameState.GAME_OVER
         self.death_anim_timer = 1.5
         hx, hy = self.snake.head
         cx = hx * CELL_SIZE + CELL_SIZE // 2 + self.grid_offset_x
